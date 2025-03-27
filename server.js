@@ -11,6 +11,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 app.use(cors());
 
+app.use('/api/bugs', require('./routes/bugRoutes'));
 
 mongoose
   .connect(MONGO_URI, {

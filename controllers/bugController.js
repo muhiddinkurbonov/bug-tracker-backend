@@ -7,6 +7,7 @@ exports.getBugs = async (req, res) => {
 
 exports.createBug = async (req, res) => {
   const bug = new Bug(req.body);
+  console.log(bug)
   const newBug = await bug.save();
   res.status(201).json(newBug);
 };
